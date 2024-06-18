@@ -15,7 +15,7 @@ const Update = () => {
   const submitHandler = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.put(`https://blogging-crud-website.vercel.app/api/v1/addnews/updatenews/${id}`, {
+      const { data } = await axios.put(`https://blogging-crud-website-u1za.vercel.app/api/v1/addnews/updatenews/${id}`, {
         title,
         subtitle,
         image,
@@ -39,7 +39,7 @@ const Update = () => {
   };
 
 useEffect(() => {
-    axios.get(`https://blogging-crud-website.vercel.app/api/v1/addnews/getsinglenews/${id}`, {
+    axios.get(`https://blogging-crud-website-u1za.vercel.app/api/v1/addnews/getsinglenews/${id}`, {
       withCredentials: true,
       headers: {
         "Content-Type": "application/json",
