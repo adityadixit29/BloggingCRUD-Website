@@ -26,7 +26,7 @@ const Home = () => {
 
   const deleteHandler = async (id) => {
     try {
-      const { data } = await axios.delete(`http://localhost:4000/api/v1/addnews/deletenews/${id}`, {
+      const { data } = await axios.delete(`https://blogging-crud-website-u1za.vercel.app/api/v1/addnews/deletenews/${id}`, {
         withCredentials: true,
       });
       toast.success(data.message);
