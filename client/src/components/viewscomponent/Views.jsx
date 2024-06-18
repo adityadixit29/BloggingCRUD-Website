@@ -8,7 +8,7 @@ const Views = () => {
       });
       useEffect(() => {           
         // Extracting grouped data for chart
-        axios.get(`http://localhost:4000/api/v1/addnews/getviews`)
+        axios.get(`https://blogging-crud-website-u1za.vercel.app/api/v1/addnews/getviews`)
         .then(response => {
           const Views = response.data.views;
   
