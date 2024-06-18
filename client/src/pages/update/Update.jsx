@@ -39,7 +39,7 @@ const Update = () => {
   };
 
 useEffect(() => {
-    axios.get(`http://localhost:4000/api/v1/addnews/getsinglenews/${id}`, {
+    axios.get(`https://blogging-crud-website.vercel.app/api/v1/addnews/getsinglenews/${id}`, {
       withCredentials: true,
       headers: {
         "Content-Type": "application/json",
