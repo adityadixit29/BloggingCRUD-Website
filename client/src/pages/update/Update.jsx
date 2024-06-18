@@ -38,20 +38,20 @@ const Update = () => {
     }
   };
 
-  useEffect(() => {
-    axios.get(`https://blogging-crud-website.vercel.app/api/v1/addnews/getsinglenews/${id}`, {
+ useEffect(() => {
+    const {data} = axios.get(`http://localhost:4000/api/v1/addnews/getsinglenews/${id}`, {
       withCredentials: true,
       headers: {
         "Content-Type": "application/json",
       }
     })
       .then(response => {
-        const newsData = response.data.getSinglenews;
-        setNews(newsData);
-        setTitle(newsData.title);
-        setSubtitle(newsData.subtitle);
-        setImage(newsData.image);
-        setContent(newsData.content);
+        
+        setNews(data);
+        setTitle(data.title);
+        setSubtitle(data.subtitle);
+        setImage(data.image);
+        setContent(data.content);
       })
       .catch(error => {
         console.log("message:" + error);
