@@ -28,6 +28,9 @@ const Home = () => {
     try {
       const { data } = await axios.delete(`https://blogging-crud-website-u1za.vercel.app/api/v1/addnews/deletenews/${id}`, {
         withCredentials: true,
+        headers: {
+        "Content-Type": "application/json",
+      }
       });
       toast.success(data.message);
       setRefresh(!refresh)
