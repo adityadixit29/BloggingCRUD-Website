@@ -12,7 +12,7 @@ const Addnews = () => {
     e.preventDefault();
     try {
       // setLoading(true);
-      const { data } = await axios.post("https://blogging-crud-website-u1za.vercel.app/api/v1/addnews/newsubmit", {
+      const { data } = await axios.post("http://localhost:4000/api/v1/addnews/newsubmit", {
         title,
         subtitle,
         image,

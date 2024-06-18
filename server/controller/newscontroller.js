@@ -1,5 +1,5 @@
-import { News } from "../model/news.js";
-import { NewsUpdate } from "../model/newsUpdate.js";
+import { News } from "../models/news.js";
+import { NewsUpdate } from "../models/newsUpdate.js";
 
 export const addNews = async (req, res) => {
     try {

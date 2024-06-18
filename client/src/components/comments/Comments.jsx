@@ -8,7 +8,7 @@ const Comments = () => {
       });
       useEffect(() => {           
         // Extracting grouped data for chart
-        axios.get(`https://blogging-crud-website-u1za.vercel.app/api/v1/addnews/getcomments`)
+        axios.get(`http://localhost:4000/api/v1/addnews/getcomments`)
         .then(response => {
           const comments = response.data.comments;
   

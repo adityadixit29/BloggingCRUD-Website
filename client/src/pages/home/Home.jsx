@@ -10,7 +10,7 @@ const Home = () => {
   const [news, setnews] = useState([]);
   const [refresh, setRefresh] = useState(false)
   useEffect(() => {
-    axios.get("https://blogging-crud-website-u1za.vercel.app/api/v1/addnews/getnews", {
+    axios.get("http://localhost:4000/api/v1/addnews/getnews", {
       withCredentials: true,
       headers: {
         "Content-Type": "application/json",
@@ -26,11 +26,8 @@ const Home = () => {
 
   const deleteHandler = async (id) => {
     try {
-      const { data } = await axios.delete(`https://blogging-crud-website-u1za.vercel.app/api/v1/addnews/deletenews/${id}`, {
+      const { data } = await axios.delete(`http://localhost:4000/api/v1/addnews/deletenews/${id}`, {
         withCredentials: true,
-        headers: {
-        "Content-Type": "application/json",
-      }
       });
       toast.success(data.message);
       setRefresh(!refresh)
