@@ -6,7 +6,7 @@ import "./index.css";
 // import "./styles/header.scss";
 
 
-export const server = "http://localhost:4000/api/v1/addnews";
+export const server = "https://blogging-crud-website-u1za.vercel.app/api/v1/addnews";
 
 export const Context = createContext({isAuthenticated: false});
 
